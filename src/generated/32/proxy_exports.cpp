@@ -1103,6 +1103,16 @@ EXPORT void SteamAPI_ISteamApps_SetDlcContext() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamApps_SetGamePerformanceSetting() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamApps_SetGameRenderResolution() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamApps_UninstallDLC() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -3098,6 +3108,21 @@ EXPORT void SteamAPI_ISteamMatchmakingRulesResponse_RulesResponded() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamMatchmakingServerFriendsResponse_AddFriendToList() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsFailedToRespond() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsRefreshComplete() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamMatchmakingServerListResponse_RefreshComplete() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -3189,6 +3214,11 @@ EXPORT void SteamAPI_ISteamMatchmakingServers_RequestLANServerList() {
 }
 
 EXPORT void SteamAPI_ISteamMatchmakingServers_RequestSpectatorServerList() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamMatchmakingServers_ServerFriends() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -4328,6 +4358,11 @@ EXPORT void SteamAPI_ISteamRemotePlay_BSendRemotePlayTogetherInvite() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamRemotePlay_BSessionRemotePlayTogether() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamRemotePlay_BStartRemotePlayTogether() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -4348,6 +4383,16 @@ EXPORT void SteamAPI_ISteamRemotePlay_GetInput() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamRemotePlay_GetLargeSessionAvatar() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamRemotePlay_GetMediumSessionAvatar() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamRemotePlay_GetSessionClientFormFactor() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -4363,12 +4408,22 @@ EXPORT void SteamAPI_ISteamRemotePlay_GetSessionCount() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamRemotePlay_GetSessionGuestID() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamRemotePlay_GetSessionID() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
 
 EXPORT void SteamAPI_ISteamRemotePlay_GetSessionSteamID() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamRemotePlay_GetSmallSessionAvatar() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -4983,6 +5038,11 @@ EXPORT void SteamAPI_ISteamUGC_GetAppDependencies() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamUGC_GetDownloadedItems() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamUGC_GetItemDownloadInfo() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -4999,6 +5059,11 @@ EXPORT void SteamAPI_ISteamUGC_GetItemState() {
 }
 
 EXPORT void SteamAPI_ISteamUGC_GetItemUpdateProgress() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamUGC_GetNumDownloadedItems() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -5109,6 +5174,11 @@ EXPORT void SteamAPI_ISteamUGC_GetUserItemVote() {
 }
 
 EXPORT void SteamAPI_ISteamUGC_GetWorkshopEULAStatus() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamUGC_MarkDownloadedItemAsUnused() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -5948,6 +6018,11 @@ EXPORT void SteamAPI_ISteamUtils_GetServerRealTime() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_ISteamUtils_GetSteamHardwareDefaultConfig() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_ISteamUtils_GetSteamUILanguage() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -5964,6 +6039,16 @@ EXPORT void SteamAPI_ISteamUtils_IsAPICallCompleted() {
 }
 
 EXPORT void SteamAPI_ISteamUtils_IsOverlayEnabled() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamUtils_IsRunningOnSteamHardware() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_ISteamUtils_IsRunningUnderProton() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -6203,6 +6288,11 @@ EXPORT void SteamAPI_SteamApps_v008() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_SteamApps_v009() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_SteamController_v007() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -6283,6 +6373,11 @@ EXPORT void SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v012() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v013() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_SteamGameServerNetworkingSockets_v008() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -6348,6 +6443,11 @@ EXPORT void SteamAPI_SteamGameServerUtils_v010() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_SteamGameServerUtils_v011() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_SteamGameServer_v013() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -6398,12 +6498,22 @@ EXPORT void SteamAPI_SteamInput_v006() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_SteamInput_v007() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_SteamInventory_v003() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
 
 EXPORT void SteamAPI_SteamMatchmakingServers_v002() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_SteamMatchmakingServers_v003() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -6693,6 +6803,11 @@ EXPORT void SteamAPI_SteamNetworkingSockets_SteamAPI_v012() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_SteamNetworkingSockets_SteamAPI_v013() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_SteamNetworkingSockets_v008() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -6744,6 +6859,11 @@ EXPORT void SteamAPI_SteamRemotePlay_v002() {
 }
 
 EXPORT void SteamAPI_SteamRemotePlay_v003() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_SteamRemotePlay_v004() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -6858,6 +6978,11 @@ EXPORT void SteamAPI_SteamUtils_v010() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_SteamUtils_v011() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_SteamVideo_v002() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -6908,6 +7033,11 @@ EXPORT void SteamAPI_gameserveritem_t_GetName() {
     asm volatile ("jmp *%eax");
 }
 
+EXPORT void SteamAPI_gameserveritem_t_IsEqualTo() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
 EXPORT void SteamAPI_gameserveritem_t_SetName() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
@@ -6949,6 +7079,11 @@ EXPORT void SteamAPI_servernetadr_t_GetQueryPort() {
 }
 
 EXPORT void SteamAPI_servernetadr_t_Init() {
+    asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
+    asm volatile ("jmp *%eax");
+}
+
+EXPORT void SteamAPI_servernetadr_t_IsEqualTo() {
     asm volatile ("movl $0xDeadC0de, %%eax":::"eax");
     asm volatile ("jmp *%eax");
 }
@@ -9491,6 +9626,18 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamApps_SetGamePerformanceSetting");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamApps_SetGamePerformanceSetting");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamApps_SetGamePerformanceSetting' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamApps_SetGameRenderResolution");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamApps_SetGameRenderResolution");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamApps_SetGameRenderResolution' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamApps_UninstallDLC");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamApps_UninstallDLC");
         LOG_TRACE("{} -> 'SteamAPI_ISteamApps_UninstallDLC' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -11885,6 +12032,24 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamMatchmakingServerFriendsResponse_AddFriendToList");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamMatchmakingServerFriendsResponse_AddFriendToList");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamMatchmakingServerFriendsResponse_AddFriendToList' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsFailedToRespond");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsFailedToRespond");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsFailedToRespond' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsRefreshComplete");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsRefreshComplete");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamMatchmakingServerFriendsResponse_FriendsRefreshComplete' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamMatchmakingServerListResponse_RefreshComplete");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamMatchmakingServerListResponse_RefreshComplete");
         LOG_TRACE("{} -> 'SteamAPI_ISteamMatchmakingServerListResponse_RefreshComplete' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -11996,6 +12161,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamMatchmakingServers_RequestSpectatorServerList");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamMatchmakingServers_RequestSpectatorServerList");
         LOG_TRACE("{} -> 'SteamAPI_ISteamMatchmakingServers_RequestSpectatorServerList' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamMatchmakingServers_ServerFriends");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamMatchmakingServers_ServerFriends");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamMatchmakingServers_ServerFriends' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -13361,6 +13532,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_BSessionRemotePlayTogether");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_BSessionRemotePlayTogether");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_BSessionRemotePlayTogether' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_BStartRemotePlayTogether");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_BStartRemotePlayTogether");
         LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_BStartRemotePlayTogether' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -13385,6 +13562,18 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetLargeSessionAvatar");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetLargeSessionAvatar");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetLargeSessionAvatar' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetMediumSessionAvatar");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetMediumSessionAvatar");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetMediumSessionAvatar' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionClientFormFactor");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionClientFormFactor");
         LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetSessionClientFormFactor' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -13403,6 +13592,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionGuestID");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionGuestID");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetSessionGuestID' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionID");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionID");
         LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetSessionID' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -13412,6 +13607,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionSteamID");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetSessionSteamID");
         LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetSessionSteamID' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamRemotePlay_GetSmallSessionAvatar");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamRemotePlay_GetSmallSessionAvatar");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamRemotePlay_GetSmallSessionAvatar' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -14147,6 +14348,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUGC_GetDownloadedItems");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUGC_GetDownloadedItems");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamUGC_GetDownloadedItems' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUGC_GetItemDownloadInfo");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUGC_GetItemDownloadInfo");
         LOG_TRACE("{} -> 'SteamAPI_ISteamUGC_GetItemDownloadInfo' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -14168,6 +14375,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUGC_GetItemUpdateProgress");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUGC_GetItemUpdateProgress");
         LOG_TRACE("{} -> 'SteamAPI_ISteamUGC_GetItemUpdateProgress' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUGC_GetNumDownloadedItems");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUGC_GetNumDownloadedItems");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamUGC_GetNumDownloadedItems' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -14300,6 +14513,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUGC_GetWorkshopEULAStatus");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUGC_GetWorkshopEULAStatus");
         LOG_TRACE("{} -> 'SteamAPI_ISteamUGC_GetWorkshopEULAStatus' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUGC_MarkDownloadedItemAsUnused");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUGC_MarkDownloadedItemAsUnused");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamUGC_MarkDownloadedItemAsUnused' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -15305,6 +15524,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUtils_GetSteamHardwareDefaultConfig");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUtils_GetSteamHardwareDefaultConfig");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamUtils_GetSteamHardwareDefaultConfig' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUtils_GetSteamUILanguage");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUtils_GetSteamUILanguage");
         LOG_TRACE("{} -> 'SteamAPI_ISteamUtils_GetSteamUILanguage' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -15326,6 +15551,18 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUtils_IsOverlayEnabled");
         src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUtils_IsOverlayEnabled");
         LOG_TRACE("{} -> 'SteamAPI_ISteamUtils_IsOverlayEnabled' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUtils_IsRunningOnSteamHardware");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUtils_IsRunningOnSteamHardware");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamUtils_IsRunningOnSteamHardware' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_ISteamUtils_IsRunningUnderProton");
+        src_address = dlsym(original_lib_handle, "SteamAPI_ISteamUtils_IsRunningUnderProton");
+        LOG_TRACE("{} -> 'SteamAPI_ISteamUtils_IsRunningUnderProton' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -15611,6 +15848,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamApps_v009");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamApps_v009");
+        LOG_TRACE("{} -> 'SteamAPI_SteamApps_v009' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamController_v007");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamController_v007");
         LOG_TRACE("{} -> 'SteamAPI_SteamController_v007' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -15707,6 +15950,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v013");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v013");
+        LOG_TRACE("{} -> 'SteamAPI_SteamGameServerNetworkingSockets_SteamAPI_v013' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamGameServerNetworkingSockets_v008");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamGameServerNetworkingSockets_v008");
         LOG_TRACE("{} -> 'SteamAPI_SteamGameServerNetworkingSockets_v008' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -15785,6 +16034,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamGameServerUtils_v011");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamGameServerUtils_v011");
+        LOG_TRACE("{} -> 'SteamAPI_SteamGameServerUtils_v011' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamGameServer_v013");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamGameServer_v013");
         LOG_TRACE("{} -> 'SteamAPI_SteamGameServer_v013' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -15845,6 +16100,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamInput_v007");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamInput_v007");
+        LOG_TRACE("{} -> 'SteamAPI_SteamInput_v007' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamInventory_v003");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamInventory_v003");
         LOG_TRACE("{} -> 'SteamAPI_SteamInventory_v003' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -15854,6 +16115,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamMatchmakingServers_v002");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamMatchmakingServers_v002");
         LOG_TRACE("{} -> 'SteamAPI_SteamMatchmakingServers_v002' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamMatchmakingServers_v003");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamMatchmakingServers_v003");
+        LOG_TRACE("{} -> 'SteamAPI_SteamMatchmakingServers_v003' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -16199,6 +16466,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamNetworkingSockets_SteamAPI_v013");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamNetworkingSockets_SteamAPI_v013");
+        LOG_TRACE("{} -> 'SteamAPI_SteamNetworkingSockets_SteamAPI_v013' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamNetworkingSockets_v008");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamNetworkingSockets_v008");
         LOG_TRACE("{} -> 'SteamAPI_SteamNetworkingSockets_v008' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -16262,6 +16535,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamRemotePlay_v003");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamRemotePlay_v003");
         LOG_TRACE("{} -> 'SteamAPI_SteamRemotePlay_v003' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamRemotePlay_v004");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamRemotePlay_v004");
+        LOG_TRACE("{} -> 'SteamAPI_SteamRemotePlay_v004' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
@@ -16397,6 +16676,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_SteamUtils_v011");
+        src_address = dlsym(original_lib_handle, "SteamAPI_SteamUtils_v011");
+        LOG_TRACE("{} -> 'SteamAPI_SteamUtils_v011' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_SteamVideo_v002");
         src_address = dlsym(original_lib_handle, "SteamAPI_SteamVideo_v002");
         LOG_TRACE("{} -> 'SteamAPI_SteamVideo_v002' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -16457,6 +16742,12 @@ namespace proxy_exports {
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
+        dest_address = dlsym(self_lib_handle, "SteamAPI_gameserveritem_t_IsEqualTo");
+        src_address = dlsym(original_lib_handle, "SteamAPI_gameserveritem_t_IsEqualTo");
+        LOG_TRACE("{} -> 'SteamAPI_gameserveritem_t_IsEqualTo' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
         dest_address = dlsym(self_lib_handle, "SteamAPI_gameserveritem_t_SetName");
         src_address = dlsym(original_lib_handle, "SteamAPI_gameserveritem_t_SetName");
         LOG_TRACE("{} -> 'SteamAPI_gameserveritem_t_SetName' src: {}, dest: {}", __func__, src_address, dest_address);
@@ -16508,6 +16799,12 @@ namespace proxy_exports {
         dest_address = dlsym(self_lib_handle, "SteamAPI_servernetadr_t_Init");
         src_address = dlsym(original_lib_handle, "SteamAPI_servernetadr_t_Init");
         LOG_TRACE("{} -> 'SteamAPI_servernetadr_t_Init' src: {}, dest: {}", __func__, src_address, dest_address);
+        if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
+        std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
+
+        dest_address = dlsym(self_lib_handle, "SteamAPI_servernetadr_t_IsEqualTo");
+        src_address = dlsym(original_lib_handle, "SteamAPI_servernetadr_t_IsEqualTo");
+        LOG_TRACE("{} -> 'SteamAPI_servernetadr_t_IsEqualTo' src: {}, dest: {}", __func__, src_address, dest_address);
         if(!src_address) src_address = reinterpret_cast<void*>(panic_exit);
         std::memcpy(static_cast<uint8_t*>(dest_address) + 1, &src_address, sizeof(void*));
 
