@@ -109,7 +109,8 @@ namespace {
 
                 // Linux binaries
                 if(
-                    name.starts_with("sdk/redistributable_bin/linux32") &&
+                    (name.starts_with("sdk/redistributable_bin/linux32") ||
+                    name.starts_with("sdk/redistributable_bin/linux64")) &&
                     !name.contains("linuxarm") &&
                     name.ends_with("libsteam_api.so")
                 ) {
