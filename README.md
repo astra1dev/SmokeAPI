@@ -411,12 +411,19 @@ For example:
 
 [CMake]: https://cmake.org/
 
+#### On Linux
+
+- Generate build files: `cmake -B build -DMODULE=SmokeAPI -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++`
+- Build SmokeAPI and necessary tools: `cmake --build build --config Release --target SmokeAPI steamworks_downloader steamworks_parser linux_exports_generator`
+
 ### 🆕 Adding support for new Steamworks SDK
 
-- Run `steamworks_downloader [prompt]` providing directory which contains Steamworks SDK zip files.
-- Run `steamworks_parser`
-- Run `linux_exports_generator [32]`
-- Run `linux_exports_generator [64]`
+- Run `cd res && ../build/tools/steamworks_downloader [prompt]` providing directory which contains Steamworks SDK zip files.
+- Run `../build/tools/steamworks_parser`
+- Run `cd .. && build/KoalaBox/tools/linux_exports_generator --input_libs_glob "res/steamworks/*/binaries/linux64/libsteam_api.so" --output_path src/generated/64/proxy_exports`
+- Generate build files for the 32-bit version of `linux_exports_generator`: `cmake -S . -B build-32 -DMODULE=SmokeAPI -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_FLAGS=-m32 -DCMAKE_CXX_FLAGS=-m32`
+- Build the 32-bit version of `linux_exports_generator`: `cmake --build build-32 --target linux_exports_generator`
+- Run `build-32/KoalaBox/tools/linux_exports_generator --input_libs_glob "res/steamworks/*/binaries/linux32/libsteam_api.so" --output_path src/generated/32/proxy_exports`
 
 
 ## 📚 Acknowledgments
